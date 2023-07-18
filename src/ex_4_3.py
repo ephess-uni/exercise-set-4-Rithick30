@@ -14,12 +14,15 @@ except ImportError:
 FILENAME = get_data_file_path("messages.log")
 # >>>> DO NOT MODIFY CODE ABOVE <<<<
 
-
 def time_between_shutdowns(logfile):
-    """
-    Your docstring here.  Replace the pass keyword below with your implementation.
-    """
-    pass
+    """INPUT-> name of the file
+        OUTPUT-> timedelta OBJECT of the difference"""
+    x = get_shutdown_events(logfile)
+    y = list()
+    for i in x:
+        u = i.split()[1]
+        y.append(logstamp_to_datetime(u))
+    return y[-1]-y[0]
 
 
 # >>>> The code below will call your function and print the results
