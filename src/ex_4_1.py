@@ -12,12 +12,11 @@ except ImportError:
 FILENAME = get_data_file_path('messages.log')
 # >>>> DO NOT MODIFY CODE ABOVE <<<<
 
-
 def num_shutdowns(logfile):
-    """
-    Your docstring here.  Replace the pass keyword below with your implementation.
-    """
-    pass
+    """ INPUT-> name of the file
+        OUTPUT-> integer output of elements in list"""
+    x = get_shutdown_events(logfile)
+    return len(x)
 
 
 # >>>> The code below will call your function and print the results
